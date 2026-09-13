@@ -10,12 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=16" />
+    <link rel="stylesheet" href="css/styles.css?v=17" />
+    <link rel="stylesheet" href="css/mobile.css?v=5" />
   </head>
   <body>
     <div class="page-scale">
       <div class="page" id="page">
         <!-- HERO -->
+        <div class="flow-section flow-hero">
         <div class="hero-back"></div>
         <header class="header"></header>
         <nav class="nav">
@@ -28,6 +30,11 @@
           <a href="#about">о нас</a>
           <a href="#reviews">отзывы</a>
           <a href="#courses">обучение</a>
+          <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="mobile-menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </nav>
 
         <div class="hero-woman fade-in" style="--d: 0.1s">
@@ -70,8 +77,13 @@
         <div class="leaf leaf-hero-right">
           <img src="assets/images/rightlist.png" alt="" width="415" height="397" />
         </div>
+        <a class="works-chevron" href="#works" aria-label="Наши работы">
+          <img src="assets/icons/chevron-down.svg" alt="" width="28" height="16" />
+        </a>
+        </div>
 
         <!-- SERVICES -->
+        <div class="flow-section flow-services">
         <section id="services" class="services-back"></section>
         <p class="eyebrow services-eyebrow reveal-on-scroll">НАШИ НАПРАВЛЕНИЯ</p>
         <h2 class="title services-title reveal-on-scroll" style="--d: 0.08s">Услуги<br /><span class="accent">      салона</span></h2>
@@ -144,14 +156,13 @@
           <span class="card-title">Маникюр/Педикюр</span>
           <span class="card-price">стоимость →</span>
         </a>
+        </div>
 
         <!-- WORKS -->
+        <div class="flow-section flow-works">
         <section id="works" class="works-bg">
           <img src="assets/images/works-bg.svg" alt="" />
         </section>
-        <a class="works-chevron" href="#works" aria-label="Наши работы">
-          <img src="assets/icons/chevron-down.svg" alt="" width="28" height="16" />
-        </a>
         <p class="eyebrow works-eyebrow reveal-on-scroll">ВДОХНОВЛЯЕМ КРАСОТОЙ</p>
         <h2 class="title works-title reveal-on-scroll" style="--d: 0.08s">Наши работы<br /><span class="accent">             и атмосфера</span></h2>
 
@@ -175,8 +186,10 @@
         <button class="works-arrow-right chevron-box" type="button" aria-label="Вперёд">
           <img src="assets/icons/chevron-right.svg" alt="" />
         </button>
+        </div>
 
         <!-- BOSS -->
+        <div class="flow-section flow-about">
         <section id="about" class="boss-back"></section>
         <h2 class="title boss-name reveal-on-scroll">Мелкумян Мери</h2>
         <div class="boss-line"></div>
@@ -192,8 +205,10 @@
         <div class="boss-photo reveal-on-scroll is-fade" style="--d: 0.12s">
           <img src="assets/images/boss.png" alt="Мелкумян Мери" />
         </div>
+        </div>
 
         <!-- REVIEWS -->
+        <div class="flow-section flow-reviews">
         <section id="reviews" class="reviews-back"></section>
         <p class="eyebrow reviews-eyebrow reveal-on-scroll">ВАШЕ МНЕНИЕ ВАЖНО</p>
         <h2 class="title reviews-title reveal-on-scroll" style="--d: 0.08s">отзывы</h2>
@@ -252,8 +267,10 @@
           <button type="button" class="reviews-dot is-active" aria-label="Отзыв Натальи" aria-current="true"></button>
           <button type="button" class="reviews-dot" aria-label="Отзыв Марины"></button>
         </div>
+        </div>
 
         <!-- COURSES -->
+        <div class="flow-section flow-courses">
         <section id="courses" class="courses-bg">
           <img src="assets/images/courses-bg.svg" alt="" />
         </section>
@@ -318,8 +335,10 @@
             </li>
           </ul>
         </article>
+        </div>
 
         <!-- CONTACTS -->
+        <div class="flow-section flow-contacts">
         <section id="contacts" class="contacts-back"></section>
         <h2 class="title contacts-title reveal-on-scroll">
           <span class="light">Ждем вас в</span><br />
@@ -382,7 +401,23 @@
         <footer class="footer">
           <p>Это учебный проект. Не является официальным сайтом салона.</p>
         </footer>
+        </div>
       </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <button class="mobile-menu-close" type="button" aria-label="Закрыть меню">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6.4 6.4l11.2 11.2M17.6 6.4L6.4 17.6" stroke="#6F625B" stroke-width="1.4" stroke-linecap="round" />
+        </svg>
+      </button>
+      <nav class="mobile-menu-nav">
+        <a href="#services">Услуги</a>
+        <a href="#services">цены</a>
+        <a href="#about">о нас</a>
+        <a href="#reviews">отзывы</a>
+        <a href="#courses">обучение</a>
+        <a href="#contacts">контакты</a>
+      </nav>
     </div>
     <div class="booking-overlay" id="course" hidden>
       <div
@@ -445,6 +480,6 @@
         </form>
       </div>
     </div>
-    <script src="js/main.js?v=26"></script>
+    <script src="js/main.js?v=27"></script>
   </body>
 </html>

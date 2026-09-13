@@ -66,6 +66,14 @@ button {
   transform-origin: top left;
 }
 
+.flow-section {
+  display: contents;
+}
+
+.menu-toggle {
+  display: none;
+}
+
 /* Typography */
 .eyebrow {
   font-family: "Cormorant Garamond", serif;
