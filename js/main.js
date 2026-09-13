@@ -2,7 +2,7 @@
   const page = document.getElementById("page");
   const wrap = document.querySelector(".page-scale");
   const DESIGN_W = 1920;
-  const DESIGN_H = 7419;
+  const DESIGN_H = 7579;
 
   function scalePage() {
     const scale = window.innerWidth / DESIGN_W;
@@ -15,7 +15,7 @@
 
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (e) {
-      if (link.classList.contains("js-open-booking") || link.classList.contains("js-open-course")) return;
+      if (link.classList.contains("js-open-course")) return;
       const id = link.getAttribute("href").slice(1);
       if (!id) return;
       const target = document.getElementById(id);
@@ -23,7 +23,8 @@
       e.preventDefault();
       const scale = window.innerWidth / DESIGN_W;
       const top = target.offsetTop * scale;
-      window.scrollTo(0, top);
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: top, behavior: reduce ? "auto" : "smooth" });
     });
   });
 
@@ -138,90 +139,7 @@
   });
   updateDots();
 
-  var overlay = document.getElementById("booking");
-  var modal = overlay && overlay.querySelector(".booking-modal");
-  var form = document.getElementById("booking-form");
-  var datetimeSelect = document.getElementById("booking-datetime");
-  var closeBtn = overlay && overlay.querySelector(".booking-close");
   var lastFocus = null;
-  var months = [
-    "января", "февраля", "марта", "апреля", "мая", "июня",
-    "июля", "августа", "сентября", "октября", "ноября", "декабря"
-  ];
-  var times = ["10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00"];
-
-  function fillDatetime() {
-    if (!datetimeSelect) return;
-    var now = new Date();
-    var i;
-    for (i = 0; i < 14; i++) {
-      var day = new Date(now.getFullYear(), now.getMonth(), now.getDate() + i);
-      var dateLabel = day.getDate() + " " + months[day.getMonth()];
-      times.forEach(function (time) {
-        var opt = document.createElement("option");
-        opt.value = dateLabel + ", " + time;
-        opt.textContent = dateLabel + ", " + time;
-        datetimeSelect.appendChild(opt);
-      });
-    }
-  }
-
-  function openBooking(e) {
-    if (e) e.preventDefault();
-    if (!overlay) return;
-    lastFocus = document.activeElement;
-    overlay.hidden = false;
-    document.body.classList.add("booking-open");
-    var first = overlay.querySelector(".booking-input");
-    if (first) first.focus();
-  }
-
-  function closeBooking() {
-    if (!overlay) return;
-    overlay.hidden = true;
-    document.body.classList.remove("booking-open");
-    if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
-  }
-
-  fillDatetime();
-
-  document.querySelectorAll(".js-open-booking").forEach(function (btn) {
-    btn.addEventListener("click", openBooking);
-  });
-
-  if (closeBtn) closeBtn.addEventListener("click", closeBooking);
-
-  if (overlay) {
-    overlay.addEventListener("click", function (e) {
-      if (e.target === overlay) closeBooking();
-    });
-  }
-
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && overlay && !overlay.hidden) closeBooking();
-  });
-
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      if (!form.reportValidity()) return;
-      var data = new FormData(form);
-      var text =
-        "Здравствуйте! Хочу записаться онлайн." +
-        "\nИмя: " + data.get("name") +
-        "\nТелефон: " + data.get("phone") +
-        "\nУслуга: " + data.get("service") +
-        "\nДата и время: " + data.get("datetime");
-      window.open(
-        "https://wa.me/79951128252?text=" + encodeURIComponent(text),
-        "_blank",
-        "noopener"
-      );
-      form.reset();
-      closeBooking();
-    });
-  }
-
   var courseOverlay = document.getElementById("course");
   var courseForm = document.getElementById("course-form");
   var courseClose = courseOverlay && courseOverlay.querySelector(".booking-close");
@@ -239,7 +157,7 @@
   function closeCourse() {
     if (!courseOverlay) return;
     courseOverlay.hidden = true;
-    if (!overlay || overlay.hidden) document.body.classList.remove("booking-open");
+    document.body.classList.remove("booking-open");
     if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
   }
 
@@ -278,6 +196,27 @@
       );
       courseForm.reset();
       closeCourse();
+    });
+  }
+
+  const scrollReveals = document.querySelectorAll(".reveal-on-scroll");
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    scrollReveals.forEach(function (el) {
+      el.classList.add("is-in");
+    });
+  } else {
+    const io = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-in");
+          io.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+    );
+    scrollReveals.forEach(function (el) {
+      io.observe(el);
     });
   }
 })();

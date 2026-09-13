@@ -20,6 +20,7 @@
   --line: #dedede;
   --divider: #a5a5a5;
   --chevron: #bdbdbd;
+  --ease-quick: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 html {
@@ -59,7 +60,7 @@ button {
 
 .page {
   width: 1920px;
-  height: 7419px;
+  height: 7579px;
   position: relative;
   background: #fff;
   transform-origin: top left;
@@ -117,6 +118,7 @@ button {
   width: 240px;
   height: 52px;
   padding: 15px 40px;
+  transition: opacity 0.25s var(--ease-quick);
 }
 
 .btn-primary:hover {
@@ -140,6 +142,7 @@ button {
   width: 160px;
   height: 52px;
   padding: 15px 20px;
+  transition: background 0.25s var(--ease-quick);
 }
 
 .btn-ghost:hover {
@@ -210,7 +213,7 @@ button {
   left: 0;
   top: 0;
   width: 1920px;
-  height: 880px;
+  height: 1040px;
   background: var(--background-main);
 }
 
@@ -248,6 +251,7 @@ button {
   text-transform: uppercase;
   color: var(--text);
   white-space: nowrap;
+  transition: color 0.25s var(--ease-quick);
 }
 
 .nav a:hover {
@@ -271,7 +275,7 @@ button {
 .hero-woman {
   position: absolute;
   left: 0;
-  top: 136px;
+  top: 306px;
   width: 1920px;
   height: 734px;
   overflow: hidden;
@@ -290,14 +294,14 @@ button {
 .hero-eyebrow {
   position: absolute;
   left: 412px;
-  top: 192px;
+  top: 232px;
   z-index: 5;
 }
 
 .hero-main {
   position: absolute;
   left: 408px;
-  top: 223px;
+  top: 263px;
   width: 522px;
   display: flex;
   flex-direction: column;
@@ -315,9 +319,9 @@ button {
 .hero-title {
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
-  font-size: 72px;
-  line-height: 64px;
-  letter-spacing: 2.88px;
+  font-size: 96px;
+  line-height: 92px;
+  letter-spacing: 3.84px;
   color: var(--headers);
   text-transform: uppercase;
   white-space: nowrap;
@@ -360,65 +364,38 @@ button {
 
 .leaf {
   position: absolute;
-  opacity: 0.75;
+  opacity: 0.7;
+  mix-blend-mode: overlay;
   z-index: 4;
   pointer-events: none;
 }
 
-.leaf-inner {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-}
-
-.leaf-inner img {
-  filter: brightness(0);
+.leaf img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .leaf-hero-left {
   left: 0;
-  top: 156px;
+  top: 96px;
   width: 289px;
   height: 488px;
-}
-
-.leaf-hero-left img {
-  position: absolute;
-  left: -14.53%;
-  top: -0.04%;
-  width: 349.88%;
-  height: auto;
 }
 
 .leaf-hero-right {
   right: 0;
   left: auto;
-  top: 156px;
-  width: 289px;
-  height: 488px;
-}
-
-.leaf-hero-right .leaf-rot {
-  width: 289px;
-  height: 488px;
-  transform: scaleX(-1);
-  position: relative;
-  overflow: hidden;
-}
-
-.leaf-hero-right img {
-  position: absolute;
-  left: -14.53%;
-  top: -0.04%;
-  width: 349.88%;
-  height: auto;
+  top: 96px;
+  width: 415px;
+  height: 397px;
 }
 
 /* ===== SERVICES ===== */
 .services-back {
   position: absolute;
   left: 0;
-  top: 880px;
+  top: 1040px;
   width: 1920px;
   height: 1648px;
   background: linear-gradient(
@@ -433,7 +410,7 @@ button {
 .services-eyebrow {
   position: absolute;
   left: 320px;
-  top: 975px;
+  top: 1135px;
   width: 208px;
   height: 21px;
   z-index: 5;
@@ -442,7 +419,7 @@ button {
 .services-title {
   position: absolute;
   left: 320px;
-  top: 1004px;
+  top: 1164px;
   width: 504px;
   height: 122px;
   z-index: 5;
@@ -452,7 +429,7 @@ button {
 .services-desc {
   position: absolute;
   right: 319px;
-  top: 1067px;
+  top: 1227px;
   width: 327px;
   height: 48px;
   text-align: right;
@@ -462,7 +439,7 @@ button {
 .services-line {
   position: absolute;
   left: 1321px;
-  top: 1055px;
+  top: 1215px;
   z-index: 5;
 }
 
@@ -505,6 +482,18 @@ button {
   z-index: 5;
 }
 
+.service-card .crop img,
+.service-card .photo img {
+  transition: transform 0.55s var(--ease-quick);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .service-card:hover .crop img,
+  .service-card:hover .photo img {
+    transform: scale(1.04);
+  }
+}
+
 .service-card .crop,
 .service-card .overlay {
   border-radius: inherit;
@@ -512,7 +501,7 @@ button {
 
 .service-hair {
   left: 320px;
-  top: 1228px;
+  top: 1388px;
   width: 630px;
   height: 557px;
   border-radius: 24px 12px 12px 12px;
@@ -541,7 +530,7 @@ button {
 
 .service-cosmo {
   left: 970px;
-  top: 1228px;
+  top: 1388px;
   width: 305px;
   height: 258px;
   border-radius: 12px;
@@ -570,7 +559,7 @@ button {
 
 .service-makeup {
   left: 970px;
-  top: 1506px;
+  top: 1666px;
   width: 303px;
   height: 550px;
   border-radius: 12px 12px 24px 12px;
@@ -614,7 +603,7 @@ button {
 
 .service-massage {
   left: 1295px;
-  top: 1228px;
+  top: 1388px;
   width: 305px;
   height: 828px;
   border-radius: 12px;
@@ -643,7 +632,7 @@ button {
 
 .service-manicure {
   left: 320px;
-  top: 1805px;
+  top: 1965px;
   width: 630px;
   height: 258px;
   border-radius: 12px 12px 12px 24px;
@@ -691,7 +680,7 @@ button {
 .works-bg {
   position: absolute;
   left: 0;
-  top: 2223px;
+  top: 2383px;
   width: 1920px;
   height: 1393.039px;
   z-index: 2;
@@ -709,7 +698,7 @@ button {
 .works-chevron {
   position: absolute;
   left: 937px;
-  top: 2255px;
+  top: 2415px;
   width: 48px;
   height: 45px;
   z-index: 6;
@@ -721,14 +710,14 @@ button {
 .works-eyebrow {
   position: absolute;
   left: 320px;
-  top: 2443px;
+  top: 2603px;
   z-index: 5;
 }
 
 .works-title {
   position: absolute;
   left: 320px;
-  top: 2473px;
+  top: 2633px;
   z-index: 5;
   white-space: pre;
 }
@@ -741,7 +730,7 @@ button {
 
 .work-center-left {
   left: 427.22px;
-  top: 2703.02px;
+  top: 2863.02px;
   width: 522.272px;
   height: 520px;
   border-radius: 12px;
@@ -757,7 +746,7 @@ button {
 
 .work-center-right {
   left: 969.5px;
-  top: 2703.02px;
+  top: 2863.02px;
   width: 522.272px;
   height: 520px;
   border-radius: 12px;
@@ -773,7 +762,7 @@ button {
 
 .work-side-left {
   left: 0;
-  top: 2732px;
+  top: 2892px;
   width: 407px;
   height: 450px;
 }
@@ -797,7 +786,7 @@ button {
 
 .work-side-right {
   left: 1511.79px;
-  top: 2732.02px;
+  top: 2892.02px;
   width: 408.213px;
   height: 450px;
 }
@@ -822,7 +811,7 @@ button {
 .works-arrow-left {
   position: absolute;
   left: 367.19px;
-  top: 2933.02px;
+  top: 3093.02px;
   z-index: 12;
   transform: rotate(90deg);
   cursor: pointer;
@@ -831,7 +820,7 @@ button {
 .works-arrow-right {
   position: absolute;
   left: 1551.81px;
-  top: 2981.02px;
+  top: 3141.02px;
   z-index: 12;
   transform: rotate(-90deg);
   cursor: pointer;
@@ -841,7 +830,7 @@ button {
 .boss-back {
   position: absolute;
   left: -1px;
-  top: 3377px;
+  top: 3537px;
   width: 1920px;
   height: 1098px;
   background: linear-gradient(
@@ -856,7 +845,7 @@ button {
 .boss-name {
   position: absolute;
   left: 430px;
-  top: 3790px;
+  top: 3950px;
   width: 541px;
   z-index: 5;
   text-transform: uppercase;
@@ -865,7 +854,7 @@ button {
 .boss-line {
   position: absolute;
   left: 430px;
-  top: 3942px;
+  top: 4102px;
   width: 433px;
   height: 1px;
   background: var(--line);
@@ -875,7 +864,7 @@ button {
 .boss-bio {
   position: absolute;
   left: 428px;
-  top: 3966px;
+  top: 4126px;
   width: 414px;
   height: 335px;
   z-index: 5;
@@ -894,7 +883,7 @@ button {
 .boss-photo {
   position: absolute;
   left: 787px;
-  top: 3471px;
+  top: 3631px;
   width: 792px;
   height: 1004px;
   overflow: hidden;
@@ -927,19 +916,19 @@ button {
 
 .reviews-arrow-left {
   left: 254px;
-  top: 4959px;
+  top: 5119px;
 }
 
 .reviews-arrow-right {
   left: 1618px;
-  top: 4959px;
+  top: 5119px;
 }
 
 /* ===== REVIEWS ===== */
 .reviews-back {
   position: absolute;
   left: -1px;
-  top: 4475px;
+  top: 4635px;
   width: 1920px;
   height: 980px;
   background: linear-gradient(
@@ -954,14 +943,14 @@ button {
 .reviews-eyebrow {
   position: absolute;
   left: 319px;
-  top: 4570px;
+  top: 4730px;
   z-index: 5;
 }
 
 .reviews-title {
   position: absolute;
   left: 320px;
-  top: 4600px;
+  top: 4760px;
   z-index: 5;
   white-space: nowrap;
 }
@@ -1039,7 +1028,7 @@ button {
 
 .review-left {
   left: 351.045px;
-  top: 4779.68px;
+  top: 4939.68px;
   width: 456.552px;
   height: 405.825px;
 }
@@ -1080,7 +1069,7 @@ button {
 
 .review-right {
   left: 1111.97px;
-  top: 4779.68px;
+  top: 4939.68px;
   width: 456.552px;
   height: 405.825px;
 }
@@ -1121,7 +1110,7 @@ button {
 
 .review-center {
   left: 731.505px;
-  top: 4708px;
+  top: 4868px;
   width: 456.552px;
   height: 515px;
 }
@@ -1169,7 +1158,7 @@ button {
 .reviews-dots {
   position: absolute;
   left: 915px;
-  top: 5267px;
+  top: 5427px;
   width: 86px;
   height: 18px;
   z-index: 8;
@@ -1194,7 +1183,7 @@ button {
 .courses-bg {
   position: absolute;
   left: 0;
-  top: 5387px;
+  top: 5547px;
   width: 1920px;
   height: 1132px;
   z-index: 6;
@@ -1212,14 +1201,14 @@ button {
 .courses-eyebrow {
   position: absolute;
   left: 320px;
-  top: 5482px;
+  top: 5642px;
   z-index: 7;
 }
 
 .courses-title {
   position: absolute;
   left: 321px;
-  top: 5512px;
+  top: 5672px;
   z-index: 7;
   white-space: pre;
 }
@@ -1227,7 +1216,7 @@ button {
 .courses-btn {
   position: absolute;
   left: 949px;
-  top: 5700px;
+  top: 5860px;
   width: 282px;
   height: 61px;
   border-radius: 30px;
@@ -1239,14 +1228,14 @@ button {
 .courses-line {
   position: absolute;
   left: 1275px;
-  top: 5695px;
+  top: 5855px;
   z-index: 7;
 }
 
 .courses-desc {
   position: absolute;
   left: 1295px;
-  top: 5706px;
+  top: 5866px;
   width: 300px;
   text-align: right;
   z-index: 7;
@@ -1260,16 +1249,21 @@ button {
   border: 1px solid var(--card-border);
   border-radius: 12px;
   z-index: 7;
+  transition: border-color 0.35s var(--ease-quick);
+}
+
+.course-card:hover {
+  border-color: var(--accent);
 }
 
 .course-basic {
   left: 337px;
-  top: 5850px;
+  top: 6010px;
 }
 
 .course-pro {
   left: 986px;
-  top: 5850px;
+  top: 6010px;
 }
 
 .course-heading {
@@ -1355,7 +1349,7 @@ button {
 .contacts-back {
   position: absolute;
   left: 0;
-  top: 6404px;
+  top: 6564px;
   width: 1920px;
   height: 915px;
   background: var(--background-header);
@@ -1365,7 +1359,7 @@ button {
 .contacts-title {
   position: absolute;
   left: 320px;
-  top: 6701px;
+  top: 6861px;
   width: 477px;
   z-index: 5;
 }
@@ -1381,14 +1375,14 @@ button {
 .contacts-address-icon {
   position: absolute;
   left: 320px;
-  top: 6925px;
+  top: 7085px;
   z-index: 5;
 }
 
 .contacts-address {
   position: absolute;
   left: 367px;
-  top: 6925px;
+  top: 7085px;
   width: 297px;
   z-index: 5;
 }
@@ -1396,14 +1390,14 @@ button {
 .contacts-phone-icon {
   position: absolute;
   left: 324px;
-  top: 6991px;
+  top: 7151px;
   z-index: 5;
 }
 
 .contacts-phone {
   position: absolute;
   left: 371px;
-  top: 6994px;
+  top: 7154px;
   z-index: 5;
   white-space: nowrap;
 }
@@ -1411,14 +1405,14 @@ button {
 .contacts-btn {
   position: absolute;
   left: 320px;
-  top: 7085px;
+  top: 7245px;
   z-index: 5;
 }
 
 .contacts-socials {
   position: absolute;
   left: 589px;
-  top: 7090px;
+  top: 7250px;
   display: flex;
   align-items: center;
   gap: 24px;
@@ -1429,6 +1423,7 @@ button {
   width: 40px;
   height: 40px;
   display: block;
+  transition: opacity 0.25s var(--ease-quick);
 }
 
 .contacts-socials a:hover {
@@ -1443,7 +1438,7 @@ button {
 .contacts-map {
   position: absolute;
   left: 862px;
-  top: 6679px;
+  top: 6839px;
   width: 738px;
   height: 482px;
   border-radius: 12px;
@@ -1483,59 +1478,24 @@ button {
 
 .leaf-contacts-left {
   left: 0;
-  top: 6827px;
+  top: 6987px;
   width: 244px;
-  height: 411px;
-  z-index: 4;
-  opacity: 0.28;
-  mix-blend-mode: multiply;
-}
-
-.leaf-contacts-left .leaf-inner img,
-.leaf-contacts-right .leaf-inner img {
-  filter: sepia(0.55) saturate(0.4) brightness(1.45);
-}
-
-.leaf-contacts-left img {
-  position: absolute;
-  left: -14.53%;
-  top: -0.04%;
-  width: 349.88%;
-  height: auto;
+  height: 412px;
 }
 
 .leaf-contacts-right {
   right: 0;
   left: auto;
-  top: 6562px;
-  width: 244px;
-  height: 411px;
-  z-index: 4;
-  opacity: 0.28;
-  mix-blend-mode: multiply;
-}
-
-.leaf-contacts-right .leaf-rot {
-  width: 244px;
-  height: 411px;
-  transform: scaleX(-1);
-  position: relative;
-  overflow: hidden;
-}
-
-.leaf-contacts-right img {
-  position: absolute;
-  left: -14.53%;
-  top: -0.04%;
-  width: 349.88%;
-  height: auto;
+  top: 6722px;
+  width: 350px;
+  height: 335px;
 }
 
 /* ===== FOOTER ===== */
 .footer {
   position: absolute;
   left: 0;
-  top: 7319px;
+  top: 7479px;
   width: 1920px;
   height: 100px;
   background: var(--headers);
@@ -1567,6 +1527,7 @@ button {
   justify-content: center;
   padding: 24px;
   background: rgba(47, 36, 31, 0.28);
+  animation: reveal-fade 0.35s var(--ease-quick) both;
 }
 
 .booking-overlay[hidden] {
@@ -1581,6 +1542,7 @@ button {
   border-radius: 12px;
   background: linear-gradient(115.16deg, #f5ede2 0.67%, #fcf8f3 47.63%, #f4ece1 99.33%);
   box-sizing: border-box;
+  animation: reveal-up 0.45s var(--ease-quick) both;
 }
 
 .booking-close {
@@ -1756,6 +1718,84 @@ body.booking-open {
   .booking-note {
     text-align: center;
     max-width: 100%;
+  }
+}
+
+/* ===== MOTION ===== */
+.reveal {
+  animation: reveal-up 0.55s var(--ease-quick) both;
+  animation-delay: var(--d, 0s);
+}
+
+.fade-in {
+  animation: reveal-fade 0.8s var(--ease-quick) both;
+  animation-delay: var(--d, 0s);
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal-on-scroll.is-fade {
+  transform: none;
+}
+
+.reveal-on-scroll.is-in {
+  animation: reveal-up 0.55s var(--ease-quick) both;
+  animation-delay: var(--d, 0s);
+}
+
+.reveal-on-scroll.is-fade.is-in {
+  animation-name: reveal-fade;
+  animation-duration: 0.7s;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .fade-in,
+  .reveal-on-scroll,
+  .reveal-on-scroll.is-in,
+  .booking-overlay,
+  .booking-modal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .nav a,
+  .btn-primary,
+  .btn-ghost,
+  .service-card .crop img,
+  .service-card .photo img,
+  .course-card,
+  .contacts-socials a {
+    transition: none;
+  }
+
+  .service-card:hover .crop img,
+  .service-card:hover .photo img {
+    transform: none;
   }
 }
 

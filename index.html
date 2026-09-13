@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=8" />
+    <link rel="stylesheet" href="css/styles.css?v=16" />
   </head>
   <body>
     <div class="page-scale">
@@ -30,13 +30,13 @@
           <a href="#courses">обучение</a>
         </nav>
 
-        <div class="hero-woman">
+        <div class="hero-woman fade-in" style="--d: 0.1s">
           <img src="assets/images/hero-woman.png" alt="" />
         </div>
 
-        <p class="eyebrow hero-eyebrow">ДОМ ЭСТЕТИКИ</p>
+        <p class="eyebrow hero-eyebrow reveal" style="--d: 0.16s">ДОМ ЭСТЕТИКИ</p>
 
-        <div class="hero-main" id="top">
+        <div class="hero-main reveal" id="top" style="--d: 0.22s">
           <div class="hero-text">
             <h1 class="hero-title">МЕРИЛАЙН</h1>
             <p class="body-text hero-lead">
@@ -51,7 +51,12 @@
               <span>Москва, м. Филатов луг</span>
             </div>
             <div class="hero-buttons">
-              <a class="btn-primary js-open-booking" href="#booking">
+              <a
+                class="btn-primary"
+                href="https://yandex.ru/maps/103817/moskovsky/?booking%5Bpage%5D=menu&amp;booking%5Bpermalink%5D=1510062371&amp;from=mapframe&amp;ll=37.364550%2C55.594228&amp;mode=poi&amp;poi%5Bpoint%5D=37.365607%2C55.593984&amp;poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1510062371&amp;pt=37.365380%2C55.594020&amp;source=mapframe&amp;utm_source=mapframe&amp;z=17"
+                target="_blank"
+                rel="noopener"
+              >
                 ЗАПИСАТЬСЯ онлайн
               </a>
               <a class="btn-ghost" href="tel:+79951128252">Позвонить</a>
@@ -60,54 +65,78 @@
         </div>
 
         <div class="leaf leaf-hero-left">
-          <div class="leaf-inner">
-            <img src="assets/images/leaf.png" alt="" />
-          </div>
+          <img src="assets/images/leftlist.png" alt="" width="289" height="488" />
         </div>
         <div class="leaf leaf-hero-right">
-          <div class="leaf-rot">
-            <div class="leaf-inner">
-              <img src="assets/images/leaf.png" alt="" />
-            </div>
-          </div>
+          <img src="assets/images/rightlist.png" alt="" width="415" height="397" />
         </div>
 
         <!-- SERVICES -->
         <section id="services" class="services-back"></section>
-        <p class="eyebrow services-eyebrow">НАШИ НАПРАВЛЕНИЯ</p>
-        <h2 class="title services-title">Услуги<br /><span class="accent">      салона</span></h2>
+        <p class="eyebrow services-eyebrow reveal-on-scroll">НАШИ НАПРАВЛЕНИЯ</p>
+        <h2 class="title services-title reveal-on-scroll" style="--d: 0.08s">Услуги<br /><span class="accent">      салона</span></h2>
         <p class="body-text services-desc">Выберите нужную услугу и запишитесь онлайн</p>
         <div class="v-line services-line"></div>
 
-        <a class="service-card service-hair" href="#contacts">
+        <a
+          class="service-card service-hair reveal-on-scroll"
+          style="--d: 0.12s"
+          href="https://yandex.ru/maps/103817/moskovsky/?booking%5Bpage%5D=services&amp;booking%5Bpermalink%5D=1510062371&amp;from=mapframe&amp;ll=37.364550%2C55.594228&amp;mode=poi&amp;poi%5Bpoint%5D=37.365607%2C55.593984&amp;poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1510062371&amp;pt=37.365380%2C55.594020&amp;source=mapframe&amp;utm_source=mapframe&amp;z=17"
+          target="_blank"
+          rel="noopener"
+        >
           <div class="crop"><img src="assets/images/service-hair.png" alt="" /></div>
           <div class="overlay"></div>
           <span class="card-title">Парикмахерские услуги</span>
           <span class="card-price">стоимость →</span>
         </a>
 
-        <a class="service-card service-cosmo" href="#contacts">
+        <a
+          class="service-card service-cosmo reveal-on-scroll"
+          style="--d: 0.12s"
+          href="https://yandex.ru/maps/103817/moskovsky/?booking%5Bpage%5D=services&amp;booking%5Bpermalink%5D=1510062371&amp;from=mapframe&amp;ll=37.364550%2C55.594228&amp;mode=poi&amp;poi%5Bpoint%5D=37.365607%2C55.593984&amp;poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1510062371&amp;pt=37.365380%2C55.594020&amp;source=mapframe&amp;utm_source=mapframe&amp;z=17"
+          target="_blank"
+          rel="noopener"
+        >
           <div class="crop"><img src="assets/images/service-cosmo.png" alt="" /></div>
           <div class="overlay"></div>
           <span class="card-title">Косметологические услуги</span>
           <span class="card-price">стоимость →</span>
         </a>
 
-        <a class="service-card service-makeup" href="#contacts">
+        <a
+          class="service-card service-makeup reveal-on-scroll"
+          style="--d: 0.12s"
+          href="https://yandex.ru/maps/103817/moskovsky/?booking%5Bpage%5D=services&amp;booking%5Bpermalink%5D=1510062371&amp;from=mapframe&amp;ll=37.364550%2C55.594228&amp;mode=poi&amp;poi%5Bpoint%5D=37.365607%2C55.593984&amp;poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1510062371&amp;pt=37.365380%2C55.594020&amp;source=mapframe&amp;utm_source=mapframe&amp;z=17"
+          target="_blank"
+          rel="noopener"
+        >
           <div class="photo"><img src="assets/images/service-makeup.png" alt="" /></div>
           <div class="overlay"></div>
           <span class="card-title">Визаж/Перманент</span>
           <span class="card-price">стоимость →</span>
         </a>
 
-        <a class="service-card service-massage" href="#contacts">
+        <a
+          class="service-card service-massage reveal-on-scroll"
+          style="--d: 0.12s"
+          href="https://yandex.ru/maps/103817/moskovsky/?booking%5Bpage%5D=services&amp;booking%5Bpermalink%5D=1510062371&amp;from=mapframe&amp;ll=37.364550%2C55.594228&amp;mode=poi&amp;poi%5Bpoint%5D=37.365607%2C55.593984&amp;poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1510062371&amp;pt=37.365380%2C55.594020&amp;source=mapframe&amp;utm_source=mapframe&amp;z=17"
+          target="_blank"
+          rel="noopener"
+        >
           <div class="crop"><img src="assets/images/service-massage.png" alt="" /></div>
           <div class="overlay"></div>
           <span class="card-title">Массаж</span>
           <span class="card-price">стоимость →</span>
         </a>
 
-        <a class="service-card service-manicure" href="#contacts">
+        <a
+          class="service-card service-manicure reveal-on-scroll"
+          style="--d: 0.12s"
+          href="https://yandex.ru/maps/103817/moskovsky/?booking%5Bpage%5D=services&amp;booking%5Bpermalink%5D=1510062371&amp;from=mapframe&amp;ll=37.364550%2C55.594228&amp;mode=poi&amp;poi%5Bpoint%5D=37.365607%2C55.593984&amp;poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1510062371&amp;pt=37.365380%2C55.594020&amp;source=mapframe&amp;utm_source=mapframe&amp;z=17"
+          target="_blank"
+          rel="noopener"
+        >
           <div class="crop"><img src="assets/images/service-manicure.png" alt="" /></div>
           <div class="manicure-overlay">
             <img src="assets/images/manicure-overlay.svg" alt="" />
@@ -123,20 +152,20 @@
         <a class="works-chevron" href="#works" aria-label="Наши работы">
           <img src="assets/icons/chevron-down.svg" alt="" width="28" height="16" />
         </a>
-        <p class="eyebrow works-eyebrow">ВДОХНОВЛЯЕМ КРАСОТОЙ</p>
-        <h2 class="title works-title">Наши работы<br /><span class="accent">             и атмосфера</span></h2>
+        <p class="eyebrow works-eyebrow reveal-on-scroll">ВДОХНОВЛЯЕМ КРАСОТОЙ</p>
+        <h2 class="title works-title reveal-on-scroll" style="--d: 0.08s">Наши работы<br /><span class="accent">             и атмосфера</span></h2>
 
-        <div class="work-photo work-side-left">
+        <div class="work-photo work-side-left reveal-on-scroll" style="--d: 0.1s">
           <img class="work-img work-slide" src="assets/images/work-2.png" alt="" />
           <img class="fade" src="assets/images/work-2-overlay.svg" alt="" />
         </div>
-        <div class="work-photo work-center-left">
+        <div class="work-photo work-center-left reveal-on-scroll" style="--d: 0.1s">
           <img class="work-slide" src="assets/images/work-1.png" alt="" />
         </div>
-        <div class="work-photo work-center-right">
+        <div class="work-photo work-center-right reveal-on-scroll" style="--d: 0.1s">
           <img class="work-slide" src="assets/images/work-3.png" alt="" />
         </div>
-        <div class="work-photo work-side-right">
+        <div class="work-photo work-side-right reveal-on-scroll" style="--d: 0.1s">
           <img class="work-img work-slide" src="assets/images/work-4.png" alt="" />
           <img class="fade" src="assets/images/work-4-overlay.svg" alt="" />
         </div>
@@ -149,9 +178,9 @@
 
         <!-- BOSS -->
         <section id="about" class="boss-back"></section>
-        <h2 class="title boss-name">Мелкумян Мери</h2>
+        <h2 class="title boss-name reveal-on-scroll">Мелкумян Мери</h2>
         <div class="boss-line"></div>
-        <div class="boss-bio">
+        <div class="boss-bio reveal-on-scroll" style="--d: 0.08s">
           <p>&nbsp;</p>
           <p>Косметолог с медицинским образованием и опытом более 18 лет.</p>
           <p>&nbsp;</p>
@@ -160,16 +189,16 @@
           <p>&nbsp;</p>
           <p>Помогает подчеркнуть естественную красоту, сохранить молодость и уверенность.</p>
         </div>
-        <div class="boss-photo">
+        <div class="boss-photo reveal-on-scroll is-fade" style="--d: 0.12s">
           <img src="assets/images/boss.png" alt="Мелкумян Мери" />
         </div>
 
         <!-- REVIEWS -->
         <section id="reviews" class="reviews-back"></section>
-        <p class="eyebrow reviews-eyebrow">ВАШЕ МНЕНИЕ ВАЖНО</p>
-        <h2 class="title reviews-title">отзывы</h2>
+        <p class="eyebrow reviews-eyebrow reveal-on-scroll">ВАШЕ МНЕНИЕ ВАЖНО</p>
+        <h2 class="title reviews-title reveal-on-scroll" style="--d: 0.08s">отзывы</h2>
 
-        <article class="review review-side review-left">
+        <article class="review review-side review-left reveal-on-scroll" style="--d: 0.1s">
           <div class="review-card"></div>
           <div class="review-avatar">
             <img src="assets/images/review-alevtina.png" alt="" />
@@ -183,7 +212,7 @@
           </p>
         </article>
 
-        <article class="review review-center">
+        <article class="review review-center reveal-on-scroll" style="--d: 0.1s">
           <div class="review-card"></div>
           <div class="review-avatar">
             <img src="assets/images/review-natalya.png" alt="" />
@@ -197,7 +226,7 @@
           </p>
         </article>
 
-        <article class="review review-side review-right">
+        <article class="review review-side review-right reveal-on-scroll" style="--d: 0.1s">
           <div class="review-card"></div>
           <div class="review-avatar">
             <img src="assets/images/review-marina.png" alt="" />
@@ -228,15 +257,15 @@
         <section id="courses" class="courses-bg">
           <img src="assets/images/courses-bg.svg" alt="" />
         </section>
-        <p class="eyebrow courses-eyebrow">РАСТИ ВМЕСТЕ С НАМИ</p>
-        <h2 class="title courses-title">Обучение<br /><span class="accent">         в сфере красоты</span></h2>
+        <p class="eyebrow courses-eyebrow reveal-on-scroll">РАСТИ ВМЕСТЕ С НАМИ</p>
+        <h2 class="title courses-title reveal-on-scroll" style="--d: 0.08s">Обучение<br /><span class="accent">         в сфере красоты</span></h2>
         <a class="btn-primary courses-btn js-open-course" href="#course">
           ОСТАВИТЬ ЗАЯВКУ
         </a>
         <div class="v-line courses-line"></div>
         <p class="body-text courses-desc">Освойте новую профессию или повысьте квалификацию</p>
 
-        <article class="course-card course-basic">
+        <article class="course-card course-basic reveal-on-scroll" style="--d: 0.1s">
           <h3 class="course-heading">БАЗОВЫЙ КУРС</h3>
           <div class="course-rule"></div>
           <p class="body-text course-lead">
@@ -263,7 +292,7 @@
           </ul>
         </article>
 
-        <article class="course-card course-pro">
+        <article class="course-card course-pro reveal-on-scroll" style="--d: 0.1s">
           <h3 class="course-heading">ПОВЫШЕНИЕ КВАЛИФИКАЦИИ</h3>
           <div class="course-rule"></div>
           <p class="body-text course-lead">
@@ -292,24 +321,30 @@
 
         <!-- CONTACTS -->
         <section id="contacts" class="contacts-back"></section>
-        <h2 class="title contacts-title">
+        <h2 class="title contacts-title reveal-on-scroll">
           <span class="light">Ждем вас в</span><br />
           <span class="bold">МериЛайн</span>
         </h2>
-        <span class="icon-24 contacts-address-icon">
+        <span class="icon-24 contacts-address-icon reveal-on-scroll" style="--d: 0.08s">
           <img src="assets/icons/location.svg" alt="" />
         </span>
-        <p class="body-text contacts-address">
+        <p class="body-text contacts-address reveal-on-scroll" style="--d: 0.08s">
           м. Филатов Луг, Радужный пр., 3, микрорайон Град Московский
         </p>
-        <span class="icon-phone contacts-phone-icon">
+        <span class="icon-phone contacts-phone-icon reveal-on-scroll" style="--d: 0.08s">
           <img src="assets/icons/phone.svg" alt="" />
         </span>
-        <a class="body-text contacts-phone" href="tel:+79951128252">+7 995 11 28 252</a>
-        <a class="btn-primary contacts-btn js-open-booking" href="#booking">
+        <a class="body-text contacts-phone reveal-on-scroll" style="--d: 0.08s" href="tel:+79951128252">+7 995 11 28 252</a>
+        <a
+          class="btn-primary contacts-btn reveal-on-scroll"
+          style="--d: 0.08s"
+          href="https://yandex.ru/maps/103817/moskovsky/?booking%5Bpage%5D=menu&amp;booking%5Bpermalink%5D=1510062371&amp;from=mapframe&amp;ll=37.364550%2C55.594228&amp;mode=poi&amp;poi%5Bpoint%5D=37.365607%2C55.593984&amp;poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1510062371&amp;pt=37.365380%2C55.594020&amp;source=mapframe&amp;utm_source=mapframe&amp;z=17"
+          target="_blank"
+          rel="noopener"
+        >
           ЗАПИСАТЬСЯ онлайн
         </a>
-        <div class="contacts-socials">
+        <div class="contacts-socials reveal-on-scroll" style="--d: 0.08s">
           <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
             <img src="assets/icons/instagram.svg" alt="" />
           </a>
@@ -320,7 +355,7 @@
             <img src="assets/icons/whatsapp.svg" alt="" />
           </a>
         </div>
-        <div class="contacts-map">
+        <div class="contacts-map reveal-on-scroll" style="--d: 0.08s">
           <iframe
             title="МериЛайн на карте: Радужный проезд, 3"
             src="https://yandex.ru/map-widget/v1/?ll=37.36538%2C55.59402&amp;z=17&amp;pt=37.36538,55.59402,pm2rdm&amp;l=map&amp;lang=ru_RU"
@@ -338,87 +373,15 @@
         </div>
 
         <div class="leaf leaf-contacts-left">
-          <div class="leaf-inner">
-            <img src="assets/images/leaf.png" alt="" />
-          </div>
+          <img src="assets/images/leftlist.png" alt="" width="244" height="412" />
         </div>
         <div class="leaf leaf-contacts-right">
-          <div class="leaf-rot">
-            <div class="leaf-inner">
-              <img src="assets/images/leaf.png" alt="" />
-            </div>
-          </div>
+          <img src="assets/images/rightlist.png" alt="" width="350" height="335" />
         </div>
 
         <footer class="footer">
-          <p>© 2026 МериЛайн. Все права защищены.</p>
+          <p>Это учебный проект. Не является официальным сайтом салона.</p>
         </footer>
-      </div>
-    </div>
-    <div class="booking-overlay" id="booking" hidden>
-      <div
-        class="booking-modal"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="booking-title"
-      >
-        <button class="booking-close" type="button" aria-label="Закрыть">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M6.4 6.4l11.2 11.2M17.6 6.4L6.4 17.6" stroke="#6F625B" stroke-width="1.4" stroke-linecap="round" />
-          </svg>
-        </button>
-        <h2 class="booking-title" id="booking-title">Записаться онлайн</h2>
-        <form class="booking-form" id="booking-form" novalidate>
-          <input
-            class="booking-input"
-            type="text"
-            name="name"
-            placeholder="Имя"
-            autocomplete="name"
-            required
-          />
-          <input
-            class="booking-input"
-            type="tel"
-            name="phone"
-            placeholder="Телефон"
-            autocomplete="tel"
-            required
-          />
-          <label class="booking-select-wrap">
-            <select class="booking-input booking-select" name="service" required>
-              <option value="" selected disabled>Выберите услугу</option>
-              <option value="Парикмахерские услуги">Парикмахерские услуги</option>
-              <option value="Косметологические услуги">Косметологические услуги</option>
-              <option value="Визаж/Перманент">Визаж/Перманент</option>
-              <option value="Массаж">Массаж</option>
-              <option value="Маникюр/Педикюр">Маникюр/Педикюр</option>
-            </select>
-            <img
-              class="booking-chevron"
-              src="assets/icons/select-chevron.svg"
-              alt=""
-              width="48"
-              height="48"
-            />
-          </label>
-          <label class="booking-select-wrap">
-            <select class="booking-input booking-select" name="datetime" id="booking-datetime" required>
-              <option value="" selected disabled>Выберите дату и время</option>
-            </select>
-            <img
-              class="booking-chevron"
-              src="assets/icons/select-chevron.svg"
-              alt=""
-              width="48"
-              height="48"
-            />
-          </label>
-          <div class="booking-bottom">
-            <p class="booking-note">Мы свяжемся с вами для подтверждения записи</p>
-            <button class="booking-submit" type="submit">отправить</button>
-          </div>
-        </form>
       </div>
     </div>
     <div class="booking-overlay" id="course" hidden>
@@ -454,8 +417,14 @@
           <label class="booking-select-wrap">
             <select class="booking-input booking-select" name="course" required>
               <option value="" selected disabled>Выберите курс</option>
-              <option value="Базовый курс">Базовый курс</option>
-              <option value="Повышение квалификации">Повышение квалификации</option>
+              <option value="Парикмахерское дело">Парикмахерское дело</option>
+              <option value="Маникюр">Маникюр</option>
+              <option value="Педикюр">Педикюр</option>
+              <option value="Оформление бровей">Оформление бровей</option>
+              <option value="Визаж">Визаж</option>
+              <option value="Перманентный макияж">Перманентный макияж</option>
+              <option value="Косметология">Косметология</option>
+              <option value="Массаж">Массаж</option>
             </select>
             <img
               class="booking-chevron"
@@ -476,6 +445,6 @@
         </form>
       </div>
     </div>
-    <script src="js/main.js?v=22"></script>
+    <script src="js/main.js?v=26"></script>
   </body>
 </html>
